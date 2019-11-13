@@ -7,7 +7,7 @@ class AccountInvoice(models.Model):
     _inherit = "account.move"
 
     employee=fields.Many2one("hr.employee","Employee",compute="employee_hournal_view")
-    employee_name=fields.Char(related='employee.name')
+    employee_name=fields.Char("Employee")
 
     @api.one
     def employee_hournal_view(self):
