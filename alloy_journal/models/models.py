@@ -14,6 +14,7 @@ class AccountInvoice(models.Model):
         self.ensure_one()
         self.employee=self.line_ids[0].x_studio_field_n0ak7
         self.employee_name=self.employee.name
+        self.write({'employee_name': self.employee.name})
 
 
 #class AccountMoveLine(models.Model):
